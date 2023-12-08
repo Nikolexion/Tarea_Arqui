@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <windows.h>
 
 // Se definen las variables globales las cuales se pueden modificar para obtener distintos resultados. Para
 // calcular la sumatoria, utilice IDENT 0 y OP +, para calcular el productorio, IDENT 1 y OP *. Para cambiar
