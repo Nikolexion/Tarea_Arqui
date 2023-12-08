@@ -91,7 +91,6 @@ int main() {
     fgets(str,20,stdin);
     //printf("Original: %s\n", str);
     clock_t ini1,fin1,ini2,fin2,ini3,fin3,ini4,fin4;
-    srand(time(NULL));
 
     ini1 = clock();
 
@@ -126,7 +125,6 @@ int main() {
     //printf("Invertido: %s\n", str);
 
     ini4 = clock();
-    //QueryPerformanceCounter(&t_ini);
 
     for (int i = 0; i < 1000001; i++)
     {
