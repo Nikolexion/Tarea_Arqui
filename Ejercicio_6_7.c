@@ -2,6 +2,7 @@
 #include <string.h>
 #include <time.h>
 
+//Funcion inicial que invierte una string
 void invertir(char *s) {
     int i;
 
@@ -13,6 +14,7 @@ void invertir(char *s) {
     }
 }
 
+//Version optimizada numero 1 con loop unrolling con 1 via
 void invertir_optimizado_1(char *s) {
     int length = strlen(s);
     int i;
@@ -32,6 +34,7 @@ void invertir_optimizado_1(char *s) {
     }
 }
 
+//Version optimizada numero 2 con loop unrolling con 2 vias
 void invertir_optimizado_2(char *s) {
     int length = strlen(s);
     int i;
@@ -55,7 +58,7 @@ void invertir_optimizado_2(char *s) {
     }
 }
 
-
+//Version optimizada numero 3 con loop unrolling con 3 vias
 void invertir_optimizado_3(char *s) {
     int length = strlen(s);
     int i;
@@ -89,46 +92,58 @@ int main() {
     char str[500];
     fgets(str,500,stdin);
     clock_t ini1,fin1,ini2,fin2,ini3,fin3,ini4,fin4;
-
+    //Se inicia el primer reloj
     ini1 = clock();
 
+//Se ejecuta multiples veces la funcion para que el numero de ciclos sea significativo
     for (int i = 0; i < 1000001; i++)
     {
         invertir(str);
     }
     
+    //Se finaliza el primer reloj
     fin1 = clock();
     printf("\nInvertido: %s\n", str);
     printf("\nCiclos sin optimizar: %ld", fin1-ini1);
 
+    //Se inicia el segundo reloj
     ini2 = clock();
 
+    //Se ejecuta multiples veces la funcion para que el numero de ciclos sea significativo
     for (int i = 0; i < 1000001; i++)
     {
         invertir_optimizado_1(str);
     }
     
+    //Se finaliza el segundo reloj
     fin2 = clock();
     printf("\nInvertido: %s\n", str);
     printf("\nCiclos optimizado1: %ld",  fin2-ini2);
+
+    //Se inicia el tercer reloj
     ini3 = clock();
 
+    //Se ejecuta multiples veces la funcion para que el numero de ciclos sea significativo
     for (int i = 0; i < 1000001; i++)
     {
         invertir_optimizado_2(str);
     }
     
+    //Se finaliza el tercer reloj
     fin3 = clock();
     printf("\nInvertido: %s\n", str);
     printf("\nCiclos optimizado2: %ld",  fin3-ini3);
 
+//Se inicia el cuarto reloj
     ini4 = clock();
 
+//Se ejecuta multiples veces la funcion para que el numero de ciclos sea significativo
     for (int i = 0; i < 1000001; i++)
     {
         invertir_optimizado_3(str);
     }
-    
+
+    //Se finaliza el cuarto reloj
     fin4 = clock();
 
     printf("\nInvertido: %s\n", str);
