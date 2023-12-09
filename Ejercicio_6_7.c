@@ -98,8 +98,8 @@ int main() {
     }
     
     fin1 = clock();
-    //printf("\nInvertido: %s\n", str);
-    printf("\nMilisegundos sin optimizar: %d", fin1-ini1);
+    printf("\nInvertido: %s\n", str);
+    printf("\nCiclos sin optimizar: %ld", fin1-ini1);
 
     ini2 = clock();
 
@@ -109,8 +109,8 @@ int main() {
     }
     
     fin2 = clock();
-    //printf("\nInvertido: %s\n", str);
-    printf("\nMilisegundos optimizado1: %d",  fin2-ini2);
+    printf("\nInvertido: %s\n", str);
+    printf("\nCiclos optimizado1: %ld",  fin2-ini2);
     ini3 = clock();
 
     for (int i = 0; i < 1000001; i++)
@@ -119,8 +119,8 @@ int main() {
     }
     
     fin3 = clock();
-    //printf("\nInvertido: %s\n", str);
-    printf("\nMilisegundos optimizado2: %d",  fin3-ini3);
+    printf("\nInvertido: %s\n", str);
+    printf("\nCiclos optimizado2: %ld",  fin3-ini3);
 
     ini4 = clock();
 
@@ -131,8 +131,8 @@ int main() {
     
     fin4 = clock();
 
-    //printf("\nInvertido: %s\n", str);
-    printf("\nMilisegundos optimizado3: %d",  fin4-ini4);
+    printf("\nInvertido: %s\n", str);
+    printf("\nCiclos optimizado3: %ld\n",  fin4-ini4);
     
     return 0;
 }
